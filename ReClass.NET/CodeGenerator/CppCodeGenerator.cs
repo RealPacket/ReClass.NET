@@ -92,7 +92,7 @@ namespace ReClassNET.CodeGenerator
 
 		#endregion
 
-		private readonly Dictionary<Type, string> nodeTypeToTypeDefinationMap;
+		private readonly Dictionary<Type, string> nodeTypeToTypeDefinitionMap;
 
 		#region HelperNodes
 
@@ -126,7 +126,7 @@ namespace ReClassNET.CodeGenerator
 
 		public CppCodeGenerator(CppTypeMapping typeMapping)
 		{
-			nodeTypeToTypeDefinationMap = new Dictionary<Type, string>
+			nodeTypeToTypeDefinitionMap = new Dictionary<Type, string>
 			{
 				[typeof(BoolNode)] = typeMapping.TypeBool,
 				[typeof(DoubleNode)] = typeMapping.TypeDouble,
@@ -242,16 +242,16 @@ namespace ReClassNET.CodeGenerator
 			switch (@enum.Size)
 			{
 				case EnumDescription.UnderlyingTypeSize.OneByte:
-					writer.WriteLine(nodeTypeToTypeDefinationMap[typeof(Int8Node)]);
+					writer.WriteLine(nodeTypeToTypeDefinitionMap[typeof(Int8Node)]);
 					break;
 				case EnumDescription.UnderlyingTypeSize.TwoBytes:
-					writer.WriteLine(nodeTypeToTypeDefinationMap[typeof(Int16Node)]);
+					writer.WriteLine(nodeTypeToTypeDefinitionMap[typeof(Int16Node)]);
 					break;
 				case EnumDescription.UnderlyingTypeSize.FourBytes:
-					writer.WriteLine(nodeTypeToTypeDefinationMap[typeof(Int32Node)]);
+					writer.WriteLine(nodeTypeToTypeDefinitionMap[typeof(Int32Node)]);
 					break;
 				case EnumDescription.UnderlyingTypeSize.EightBytes:
-					writer.WriteLine(nodeTypeToTypeDefinationMap[typeof(Int64Node)]);
+					writer.WriteLine(nodeTypeToTypeDefinitionMap[typeof(Int64Node)]);
 					break;
 			}
 			writer.WriteLine("{");
@@ -561,20 +561,17 @@ namespace ReClassNET.CodeGenerator
 				return custom.GetTypeDefinition(node, GetTypeDefinition, ResolveWrappedType, logger);
 			}
 
-			if (nodeTypeToTypeDefinationMap.TryGetValue(node.GetType(), out var type))
+			if (nodeTypeToTypeDefinitionMap.TryGetValue(node.GetType(), out var type))
 			{
 				return type;
 			}
 
-			switch (node)
+			return node switch
 			{
-				case ClassInstanceNode classInstanceNode:
-					return $"class {classInstanceNode.InnerNode.Name}";
-				case EnumNode enumNode:
-					return enumNode.Enum.Name;
-			}
-
-			return null;
+				ClassInstanceNode classInstanceNode => $"class {classInstanceNode.InnerNode.Name}",
+				EnumNode enumNode => enumNode.Enum.Name,
+				_ => null,
+			};
 		}
 
 		/// <summary>

@@ -38,7 +38,10 @@ namespace ReClassNET.MemoryScanner
 		public ScanResultStore(ScanValueType valueType, string storePath)
 		{
 			this.valueType = valueType;
-			this.storePath = Path.Combine(storePath, $"ReClass.NET_MemoryScanner_{Guid.NewGuid()}.tmp");
+			this.storePath = Path.Combine(
+				storePath,
+				$"{Constants.ApplicationName}_MemoryScanner_{Guid.NewGuid()}.tmp"
+			);
 		}
 
 		public void Dispose()

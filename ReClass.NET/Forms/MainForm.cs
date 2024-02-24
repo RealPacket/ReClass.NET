@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
+//using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -1051,5 +1052,11 @@ namespace ReClassNET.Forms
 				args.BaseAddress = address;
 			}
 		}
+		/*
+#region Dark mode
+		[DllImport("dwmapi.dll")]
+		static extern void DwmSetWindowAttribute(IntPtr hwnd, int attribute, int attributeSize);
+#endregion
+		*/
 	}
 }
