@@ -180,7 +180,7 @@ namespace ReClassNET.Forms
             this.ForeColor = System.Drawing.Color.White;
             this.MinimumSize = new System.Drawing.Size(396, 321);
             this.Name = "EnumEditorForm";
-            this.Text = Constants.ApplicationName + "- Enum Editor";
+            this.Text = Constants.ApplicationDisplayName + "- Enum Editor";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enumDataGridView)).EndInit();
             this.ResumeLayout(false);

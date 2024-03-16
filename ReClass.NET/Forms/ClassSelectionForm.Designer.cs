@@ -122,7 +122,7 @@ namespace ReClassNET.Forms
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ClassSelectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationName + " - Class Selection";
+            this.Text = Constants.ApplicationDisplayName + " - Class Selection";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,7 +11,7 @@ namespace ReClassNET.Forms
 		{
 			InitializeComponent();
 			bannerBox.Icon = Properties.Resources.ReClassNet.ToBitmap();
-			bannerBox.Title = Constants.ApplicationName;
+			bannerBox.Title = Constants.ApplicationDisplayName;
 			bannerBox.Text = $"Version: {Constants.ApplicationVersion}";
 
 			platformValueLabel.Text = Constants.Platform;

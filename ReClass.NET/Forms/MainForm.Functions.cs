@@ -49,7 +49,7 @@ namespace ReClassNET.Forms
 			var info = Program.CoreFunctions.EnumerateProcesses().FirstOrDefault(p => string.Equals(p.Name, processName, StringComparison.OrdinalIgnoreCase));
 			if (info == null)
 			{
-				MessageBox.Show($"Process '{processName}' could not be found.", Constants.ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"Process '{processName}' could not be found.", Constants.ApplicationDisplayName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 				Program.Settings.LastProcess = string.Empty;
 			}
@@ -194,9 +194,9 @@ namespace ReClassNET.Forms
 			{
 				CheckFileExists = true,
 				Filter = $"All ReClass Types |*{ReClassNetFile.FileExtension};*{ReClassFile.FileExtension};*{ReClassQtFile.FileExtension}"
-				         + $"|{ReClassNetFile.FormatName} (*{ReClassNetFile.FileExtension})|*{ReClassNetFile.FileExtension}"
-				         + $"|{ReClassFile.FormatName} (*{ReClassFile.FileExtension})|*{ReClassFile.FileExtension}"
-				         + $"|{ReClassQtFile.FormatName} (*{ReClassQtFile.FileExtension})|*{ReClassQtFile.FileExtension}"
+						 + $"|{ReClassNetFile.FormatName} (*{ReClassNetFile.FileExtension})|*{ReClassNetFile.FileExtension}"
+						 + $"|{ReClassFile.FormatName} (*{ReClassFile.FileExtension})|*{ReClassFile.FileExtension}"
+						 + $"|{ReClassQtFile.FormatName} (*{ReClassQtFile.FileExtension})|*{ReClassQtFile.FileExtension}"
 			};
 
 			if (ofd.ShowDialog() == DialogResult.OK)

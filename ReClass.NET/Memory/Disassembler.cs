@@ -99,10 +99,12 @@ namespace ReClassNET.Memory
 			return DisassembleFunction(buffer, address);
 		}
 
-		public int parameterCount(IRemoteMemoryReader process, IntPtr address) {
+		public int parameterCount(IRemoteMemoryReader process, IntPtr address)
+		{
 			var instructions = RemoteDisassembleFunction(process, address, 0);
 			var count = 0;
-			instructions.ForEach(instruction => {
+			instructions.ForEach(instruction =>
+			{
 				throw new NotImplementedException("TODO!");
 			});
 			return count;

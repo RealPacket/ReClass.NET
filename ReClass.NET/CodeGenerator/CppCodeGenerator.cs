@@ -159,7 +159,7 @@ namespace ReClassNET.CodeGenerator
 			using var sw = new StringWriter();
 			using var iw = new IndentedTextWriter(sw, "\t");
 
-			iw.WriteLine($"// Created with {Constants.ApplicationName} {Constants.ApplicationVersion} by {Constants.Author}");
+			iw.WriteLine($"// Created with {Constants.ApplicationDisplayName} {Constants.ApplicationVersion} by {Constants.Author}");
 			iw.WriteLine();
 
 			using (var en = enums.GetEnumerator())
@@ -305,7 +305,7 @@ namespace ReClassNET.CodeGenerator
 			}
 
 			writer.WriteLine();
-			
+
 			writer.WriteLine("{");
 			writer.WriteLine("public:");
 			writer.Indent++;
@@ -514,32 +514,32 @@ namespace ReClassNET.CodeGenerator
 			switch (node)
 			{
 				case BaseTextNode textNode:
-				{
-					var arrayNode = new ArrayNode { Count = textNode.Length };
-					arrayNode.CopyFromNode(node);
-					arrayNode.ChangeInnerNode(GetCharacterNodeForEncoding(textNode.Encoding));
-					return arrayNode;
-				}
+					{
+						var arrayNode = new ArrayNode { Count = textNode.Length };
+						arrayNode.CopyFromNode(node);
+						arrayNode.ChangeInnerNode(GetCharacterNodeForEncoding(textNode.Encoding));
+						return arrayNode;
+					}
 				case BaseTextPtrNode textPtrNode:
-				{
-					var pointerNode = new PointerNode();
-					pointerNode.CopyFromNode(node);
-					pointerNode.ChangeInnerNode(GetCharacterNodeForEncoding(textPtrNode.Encoding));
-					return pointerNode;
-				}
+					{
+						var pointerNode = new PointerNode();
+						pointerNode.CopyFromNode(node);
+						pointerNode.ChangeInnerNode(GetCharacterNodeForEncoding(textPtrNode.Encoding));
+						return pointerNode;
+					}
 				case BitFieldNode bitFieldNode:
-				{
-					var underlayingNode = bitFieldNode.GetUnderlayingNode();
-					underlayingNode.CopyFromNode(node);
-					return underlayingNode;
-				}
+					{
+						var underlayingNode = bitFieldNode.GetUnderlayingNode();
+						underlayingNode.CopyFromNode(node);
+						return underlayingNode;
+					}
 				case BaseHexNode hexNode:
-				{
-					var arrayNode = new ArrayNode { Count = hexNode.MemorySize };
-					arrayNode.CopyFromNode(node);
-					arrayNode.ChangeInnerNode(new Utf8CharacterNode());
-					return arrayNode;
-				}
+					{
+						var arrayNode = new ArrayNode { Count = hexNode.MemorySize };
+						arrayNode.CopyFromNode(node);
+						arrayNode.ChangeInnerNode(new Utf8CharacterNode());
+						return arrayNode;
+					}
 			}
 
 			return node;

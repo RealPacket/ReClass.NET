@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using ReClassNET;
 
-[assembly: AssemblyTitle(Constants.ApplicationName)]
+[assembly: AssemblyTitle(Constants.ApplicationDisplayName)]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct(Constants.ApplicationName)]
+[assembly: AssemblyProduct(Constants.ApplicationDisplayName)]
 [assembly: AssemblyCopyright(Constants.Author)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

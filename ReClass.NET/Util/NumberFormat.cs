@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.Contracts;
+using System.Diagnostics.Contracts;
 using System.Globalization;
 
 namespace ReClassNET.Util
@@ -21,7 +21,7 @@ namespace ReClassNET.Util
 					NumberGroupSeparator = "."
 				};
 			}
-			
+
 			return new NumberFormatInfo
 			{
 				NumberDecimalSeparator = ".",

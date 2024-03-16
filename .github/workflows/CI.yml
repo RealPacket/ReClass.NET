@@ -4,37 +4,37 @@
 name: CI
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
+    workflow_dispatch:
+    push:
+        branches:
+            - master
 
 jobs:
-  build:
-    runs-on: windows-latest
-    steps:
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Add SHORT_SHA env property with commit short SHA
-        run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
-      - name: MSBuild
-        run: |
-          Remove-Item -R -Fo -EA SilentlyContinue bin
-          msbuild /t:Reclass_NET:Rebuild /p:Configuration=Release /p:Platform=x64 ReClass.NET.sln
-          msbuild /t:Reclass_NET:Rebuild /p:Configuration=Release /p:Platform=x86 ReClass.NET.sln
-      - name: Zip release
-        uses: vimtor/action-zip@v1.2
-        with:
-          files: bin\Release
-          recursive: true
-          dest: ReClass.NET-${{ env.SHORT_SHA }}.zip
-      - name: Release
-        uses: marvinpinto/action-automatic-releases@v1.2.1
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Development Build"
-          files: ReClass.NET-${{ env.SHORT_SHA }}.zip
+    build:
+        runs-on: windows-latest
+        steps:
+            - name: Setup MSBuild
+              uses: microsoft/setup-msbuild@v2
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Add SHORT_SHA env property with commit short SHA
+              run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+            - name: MSBuild
+              run: |
+                  Remove-Item -R -Fo -EA SilentlyContinue bin
+                  msbuild /t:Reclass_NET:Rebuild /p:Configuration=Release /p:Platform=x64 ReClass.NET.sln
+                  msbuild /t:Reclass_NET:Rebuild /p:Configuration=Release /p:Platform=x86 ReClass.NET.sln
+            - name: Zip release
+              uses: vimtor/action-zip@v1.2
+              with:
+                  files: bin\Release
+                  recursive: true
+                  dest: ReClass.NET-${{ env.SHORT_SHA }}.zip
+            - name: Release
+              uses: marvinpinto/action-automatic-releases@v1.2.1
+              with:
+                  repo_token: "${{ secrets.GITHUB_TOKEN }}"
+                  automatic_release_tag: "latest"
+                  prerelease: true
+                  title: "Development Build"
+                  files: ReClass.NET-${{ env.SHORT_SHA }}.zip

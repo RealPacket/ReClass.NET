@@ -2,8 +2,12 @@ namespace ReClassNET
 {
 	public class Constants
 	{
-		public const string ApplicationName = "ReAss.NET";
-
+		public const string ApplicationName = "ReClass.NET";
+		/// <summary>
+		/// Used in places like window titles, text, and etc.
+		/// Core things not shown to the user won't use this.
+		/// </summary>
+		public const string ApplicationDisplayName = "ReAss.NET";
 		public const string ApplicationExecutableName = $"{ApplicationName}.exe";
 
 		public const string ApplicationVersion = "1.2";

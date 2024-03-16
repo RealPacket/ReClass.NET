@@ -13,7 +13,7 @@ namespace ReClassNET.Forms
 	{
 		private const string NoPreviousProcess = "No previous process";
 
-		private static readonly string[] commonProcesses = 
+		private static readonly string[] commonProcesses =
 		{
 			"[system process]", "system", "svchost.exe", "services.exe", "wininit.exe",
 			"smss.exe", "csrss.exe", "lsass.exe", "winlogon.exe", "wininit.exe", "dwm.exe"

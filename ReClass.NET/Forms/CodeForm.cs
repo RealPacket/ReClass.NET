@@ -1,24 +1,20 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Diagnostics.Contracts;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ColorCode;
 using ColorCode.Parsing;
-using ColorCode.Styling.StyleSheets;
 using ReClassNET.CodeGenerator;
 using ReClassNET.Extensions;
 using ReClassNET.Logger;
 using ReClassNET.Nodes;
 using ReClassNET.Project;
+using ReClassNET.StyleSheets;
 using ReClassNET.UI;
 using ReClassNET.Util.Rtf;
-using ReClassNET.StyleSheets;
 
 namespace ReClassNET.Forms
 {

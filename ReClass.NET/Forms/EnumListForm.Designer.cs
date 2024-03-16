@@ -130,7 +130,7 @@ namespace ReClassNET.Forms
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "EnumListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationName + " - Enums";
+            this.Text = Constants.ApplicationDisplayName + " - Enums";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -23,7 +23,8 @@ namespace ReClassNET.CodeGenerator
 			public readonly string[] Includes = [];
 			public static implicit operator string(TypeDefinition self) => self.TypeDef;
 			public static implicit operator TypeDefinition(string self) => new TypeDefinition(self);
-			public TypeDefinition(string s) {
+			public TypeDefinition(string s)
+			{
 				TypeDef = s;
 				Includes = [];
 			}
@@ -32,7 +33,8 @@ namespace ReClassNET.CodeGenerator
 				TypeDef = s;
 				Includes = includes;
 			}
-			public override string ToString() {
+			public override string ToString()
+			{
 				return TypeDef;
 			}
 		}
@@ -96,7 +98,7 @@ namespace ReClassNET.CodeGenerator
 			using StringWriter sw = new();
 			using StringWriter intermediateWriter = new();
 			using var iw = new IndentedTextWriter(intermediateWriter, "\t");
-			sw.WriteLine($"// Created with {Constants.ApplicationName} {Constants.ApplicationVersion} by {Constants.Author}");
+			sw.WriteLine($"// Created with {Constants.ApplicationDisplayName} {Constants.ApplicationVersion} by {Constants.Author}");
 			sw.WriteLine();
 			sw.WriteLine("// Warning: The C# code generator doesn't support all node types!");
 			sw.WriteLine();
@@ -211,7 +213,8 @@ namespace ReClassNET.CodeGenerator
 				var kv = @enum.Values[j];
 
 				writer.Write(kv.Key);
-				if (assumedValue != kv.Value) {
+				if (assumedValue != kv.Value)
+				{
 					writer.Write(" = ");
 					writer.Write(kv.Value);
 					assumedValue = kv.Value + 1;
@@ -266,13 +269,15 @@ namespace ReClassNET.CodeGenerator
 				var (type, attribute) = GetTypeDefinition(node);
 				if (type != null)
 				{
-					if (type.Includes.Any()) {
+					if (type.Includes.Any())
+					{
 						Contract.Requires(iw != null);
 						type.Includes
 							.WhereNot(imports.Contains)
-							.ForEach(i => {
-								 iw.WriteLine($"using {i};");
-								 imports.Add(i);
+							.ForEach(i =>
+							{
+								iw.WriteLine($"using {i};");
+								imports.Add(i);
 							});
 					}
 					if (attribute != null)
@@ -303,7 +308,8 @@ namespace ReClassNET.CodeGenerator
 					.OfType<VirtualMethodNode>();
 				foreach (var method in virtualMethodNodes)
 				{
-					if (!string.IsNullOrWhiteSpace(method.Comment)) {
+					if (!string.IsNullOrWhiteSpace(method.Comment))
+					{
 						writer.WriteLine($"// {method.Comment}");
 					}
 					writer.Write("virtual void ");
@@ -333,7 +339,8 @@ namespace ReClassNET.CodeGenerator
 			if (nodeTypeToTypeDefinitionMap.TryGetValue(node.GetType(), out var type))
 			{
 				return (new TypeDefinition(type), null);
-			} else if (complexTypeDefinitions.TryGetValue(node.GetType(), out var t))
+			}
+			else if (complexTypeDefinitions.TryGetValue(node.GetType(), out var t))
 			{
 				return (t, null);
 			}
@@ -371,4 +378,3 @@ namespace ReClassNET.CodeGenerator
 		}
 	}
 }
- 

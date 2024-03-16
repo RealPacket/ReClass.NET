@@ -1396,7 +1396,7 @@ namespace ReClassNET.Forms
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(200, 100);
             this.Name = "MainForm";
-            this.Text = Constants.ApplicationName;
+            this.Text = Constants.ApplicationDisplayName;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);

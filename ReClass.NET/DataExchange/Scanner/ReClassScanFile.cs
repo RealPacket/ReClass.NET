@@ -15,7 +15,7 @@ namespace ReClassNET.DataExchange.Scanner
 	public class ReClassScanFile : IScannerImport, IScannerExport
 	{
 		public const string FormatName =
-			$"{Constants.ApplicationName} Scanner File";
+			$"{Constants.ApplicationDisplayName} Scanner File";
 		public const string FileExtension = ".rcnetscan";
 
 		private const string Version1 = "1";
@@ -126,7 +126,7 @@ namespace ReClassNET.DataExchange.Scanner
 			using var entryStream = dataEntry.Open();
 
 			var document = new XDocument(
-				new XComment($"{Constants.ApplicationName} Scanner {Constants.ApplicationVersion} by {Constants.Author}"),
+				new XComment($"{Constants.ApplicationDisplayName} Scanner {Constants.ApplicationVersion} by {Constants.Author}"),
 				new XComment($"Website: {Constants.HomepageUrl}"),
 				new XElement(
 					XmlRootElement,
