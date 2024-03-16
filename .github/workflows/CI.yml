@@ -18,7 +18,9 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
             - name: Add SHORT_SHA env property with commit short SHA
-              run: echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
+              run:
+                  $GITHUB_SHA | ForEach-Object { $SHORT_SHA = $_.Substring(0, 8) }
+                  Add-Content -Path $env:GITHUB_ENV -Value "SHORT_SHA=$SHORT_SHA"
             - name: MSBuild
               run: |
                   Remove-Item -R -Fo -EA SilentlyContinue bin
@@ -29,13 +31,13 @@ jobs:
               with:
                   files: bin\Release
                   recursive: true
-                  dest: ReClass.NET-${{ env.SHORT_SHA }}.zip
+                  dest: ReClass.NET.zip
             - name: Release
               uses: softprops/action-gh-release@v2.0.4
               with:
                   token: "${{ secrets.GITHUB_TOKEN }}"
-                  tag_name: "latest"
+                  tag_name: ${{ env.SHORT_SHA }}
                   prerelease: true
                   generate_release_notes: true
                   name: Development build
-                  files: ReClass.NET-${{ env.SHORT_SHA }}.zip
+                  files: ReClass.NET.zip
