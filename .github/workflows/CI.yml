@@ -18,7 +18,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
             - name: Add SHORT_SHA env property with commit short SHA
-              run: echo "SHORT_SHA=`echo ${GITHUB_SHA} | cut -c1-8`" >> $GITHUB_ENV
+              run: echo "SHORT_SHA=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
             - name: MSBuild
               run: |
                   Remove-Item -R -Fo -EA SilentlyContinue bin
