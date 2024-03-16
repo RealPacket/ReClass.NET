@@ -54,6 +54,7 @@ namespace ReClassNET.Forms
             this.codeRichTextBox.ForeColor = System.Drawing.Color.White;
             this.codeRichTextBox.Location = new System.Drawing.Point(0, 48);
             this.codeRichTextBox.Name = "codeRichTextBox";
+            this.codeRichTextBox.ReadOnly = true;
             this.codeRichTextBox.Size = new System.Drawing.Size(629, 390);
             this.codeRichTextBox.TabIndex = 3;
             this.codeRichTextBox.Text = "";
@@ -70,7 +71,7 @@ namespace ReClassNET.Forms
             this.MinimumSize = new System.Drawing.Size(350, 185);
             this.Name = "CodeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationName + "- Code Generator";
+            this.Text = "ReAss.NET- Code Generator";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.ResumeLayout(false);
 

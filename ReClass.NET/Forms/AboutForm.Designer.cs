@@ -168,6 +168,7 @@ namespace ReClassNET.Forms
             this.licenseTextBox.Location = new System.Drawing.Point(6, 19);
             this.licenseTextBox.Multiline = true;
             this.licenseTextBox.Name = "licenseTextBox";
+            this.licenseTextBox.ReadOnly = true;
             this.licenseTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.licenseTextBox.Size = new System.Drawing.Size(370, 149);
             this.licenseTextBox.TabIndex = 0;
@@ -195,7 +196,7 @@ namespace ReClassNET.Forms
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationName + " - Info";
+            this.Text = "ReAss.NET - Info";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.licenseGroupBox.ResumeLayout(false);
             this.licenseGroupBox.PerformLayout();
