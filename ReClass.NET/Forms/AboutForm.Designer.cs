@@ -196,7 +196,7 @@ namespace ReClassNET.Forms
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ReAss.NET - Info";
+            this.Text = Constants.AppDisplayName + " - Info";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.licenseGroupBox.ResumeLayout(false);
             this.licenseGroupBox.PerformLayout();

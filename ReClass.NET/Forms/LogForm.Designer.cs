@@ -139,7 +139,7 @@ namespace ReClassNET.Forms
             this.Controls.Add(this.entriesDataGridView);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "LogForm";
-            this.Text = Constants.ApplicationDisplayName + "- Diagnostic Messages";
+            this.Text = Constants.AppDisplayName + "- Diagnostic Messages";
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);

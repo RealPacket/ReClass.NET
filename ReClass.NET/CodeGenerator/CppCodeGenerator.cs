@@ -159,7 +159,7 @@ namespace ReClassNET.CodeGenerator
 			using var sw = new StringWriter();
 			using var iw = new IndentedTextWriter(sw, "\t");
 
-			iw.WriteLine($"// Created with {Constants.ApplicationDisplayName} {Constants.ApplicationVersion} by {Constants.Author}");
+			iw.WriteLine($"// Created with {Constants.AppDisplayName} {Constants.AppVersion} by {Constants.Author}");
 			iw.WriteLine();
 
 			using (var en = enums.GetEnumerator())

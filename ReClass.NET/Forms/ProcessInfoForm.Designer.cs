@@ -316,7 +316,7 @@ namespace ReClassNET.Forms
             this.MinimumSize = new System.Drawing.Size(586, 320);
             this.Name = "ProcessInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationDisplayName + " - Process Info";
+            this.Text = Constants.AppDisplayName + " - Process Info";
             this.Load += new System.EventHandler(this.ProcessInfoForm_Load);
             this.contextMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sectionsDataGridView)).EndInit();

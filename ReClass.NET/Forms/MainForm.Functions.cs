@@ -25,7 +25,7 @@ namespace ReClassNET.Forms
 		{
 			Contract.Requires(partialClasses != null);
 
-			ShowCodeGeneratorForm(partialClasses, new EnumDescription[0], new CppCodeGenerator(currentProject.TypeMapping));
+			ShowCodeGeneratorForm(partialClasses, [], new CppCodeGenerator(currentProject.TypeMapping));
 		}
 
 		public void ShowCodeGeneratorForm(ICodeGenerator generator)
@@ -49,7 +49,7 @@ namespace ReClassNET.Forms
 			var info = Program.CoreFunctions.EnumerateProcesses().FirstOrDefault(p => string.Equals(p.Name, processName, StringComparison.OrdinalIgnoreCase));
 			if (info == null)
 			{
-				MessageBox.Show($"Process '{processName}' could not be found.", Constants.ApplicationDisplayName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show($"Process '{processName}' could not be found.", Constants.AppDisplayName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 				Program.Settings.LastProcess = string.Empty;
 			}

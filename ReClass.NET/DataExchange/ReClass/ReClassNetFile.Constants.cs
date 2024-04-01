@@ -3,7 +3,7 @@ namespace ReClassNET.DataExchange.ReClass
 	public partial class ReClassNetFile
 	{
 		public const string FormatName =
-			$"{Constants.ApplicationDisplayName} File";
+			$"{Constants.AppDisplayName} File";
 		public const string FileExtension = ".rcnet";
 		public const string FileExtensionId = "rcnetfile";
 

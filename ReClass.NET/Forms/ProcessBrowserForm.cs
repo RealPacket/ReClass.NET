@@ -105,7 +105,7 @@ namespace ReClassNET.Forms
 			dt.Columns.Add("id", typeof(IntPtr));
 			dt.Columns.Add("path", typeof(string));
 			dt.Columns.Add("info", typeof(ProcessInfo));
-
+			
 			var shouldFilter = filterCheckBox.Checked;
 
 			foreach (var p in Program.CoreFunctions.EnumerateProcesses().Where(p => !shouldFilter || !commonProcesses.Contains(p.Name.ToLower())))

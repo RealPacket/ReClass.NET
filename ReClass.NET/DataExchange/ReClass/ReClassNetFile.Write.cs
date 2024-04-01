@@ -28,7 +28,7 @@ namespace ReClassNET.DataExchange.ReClass
 			using var entryStream = dataEntry.Open();
 
 			var document = new XDocument(
-				new XComment($"{Constants.ApplicationDisplayName} {Constants.ApplicationVersion} by {Constants.Author}"),
+				new XComment($"{Constants.AppDisplayName} {Constants.AppVersion} by {Constants.Author}"),
 				new XComment($"Website: {Constants.HomepageUrl}"),
 				new XElement(
 					XmlRootElement,

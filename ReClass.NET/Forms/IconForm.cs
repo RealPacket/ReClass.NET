@@ -1,26 +1,22 @@
 using System.Windows.Forms;
 
-namespace ReClassNET.Forms
+namespace ReClassNET.Forms;
+public class IconForm : Form
 {
-	public class IconForm : Form
+	public IconForm()
 	{
-		public IconForm()
-		{
-			Icon = Properties.Resources.ReClassNet;
-		}
+		Icon = Properties.Resources.ReClassNet;
+		InitializeComponent();
+	}
 
-		private void InitializeComponent()
-		{
-			this.SuspendLayout();
-			// 
-			// IconForm
-			// 
-			this.BackColor = System.Drawing.Color.Black;
-			this.ClientSize = new System.Drawing.Size(284, 261);
-			this.ForeColor = System.Drawing.Color.White;
-			this.Name = "IconForm";
-			this.ResumeLayout(false);
-
-		}
+	private void InitializeComponent()
+	{
+		// 
+		// IconForm
+		// 
+		BackColor = System.Drawing.Color.Black;
+		ClientSize = new System.Drawing.Size(284, 261);
+		ForeColor = System.Drawing.Color.White;
+		Name = "IconForm";
 	}
 }

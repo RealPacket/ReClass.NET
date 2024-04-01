@@ -4,15 +4,8 @@ namespace ReClassNET.Forms
 {
 	partial class MainForm
 	{
-		/// <summary>
-		/// Erforderliche Designervariable.
-		/// </summary>
 		private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
-		/// </summary>
-		/// <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
@@ -22,12 +15,8 @@ namespace ReClassNET.Forms
 			base.Dispose(disposing);
 		}
 
-		#region Vom Windows Form-Designer generierter Code
+		#region Windows Form-Designer generated Code
 
-		/// <summary>
-		/// Erforderliche Methode für die Designerunterstützung.
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
-		/// </summary>
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
@@ -146,7 +135,7 @@ namespace ReClassNET.Forms
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.processToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.processInformationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.processInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memorySearcherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.namedAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
@@ -163,8 +152,10 @@ namespace ReClassNET.Forms
             this.cleanUnusedClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showEnumsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.generateCppCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.generateCSharpCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rustToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.csToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -1088,6 +1079,8 @@ namespace ReClassNET.Forms
             // 
             // attachToProcessToolStripMenuItem
             // 
+            this.attachToProcessToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.attachToProcessToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.attachToProcessToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Magnifier;
             this.attachToProcessToolStripMenuItem.Name = "attachToProcessToolStripMenuItem";
             this.attachToProcessToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1096,6 +1089,8 @@ namespace ReClassNET.Forms
             // 
             // reattachToProcessToolStripMenuItem
             // 
+            this.reattachToProcessToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.reattachToProcessToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.reattachToProcessToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Magnifier_Arrow;
             this.reattachToProcessToolStripMenuItem.Name = "reattachToProcessToolStripMenuItem";
             this.reattachToProcessToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1104,6 +1099,8 @@ namespace ReClassNET.Forms
             // 
             // detachToolStripMenuItem
             // 
+            this.detachToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.detachToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.detachToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Magnifier_Remove;
             this.detachToolStripMenuItem.Name = "detachToolStripMenuItem";
             this.detachToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1117,6 +1114,8 @@ namespace ReClassNET.Forms
             // 
             // openProjectToolStripMenuItem
             // 
+            this.openProjectToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.openProjectToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.openProjectToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Folder;
             this.openProjectToolStripMenuItem.Name = "openProjectToolStripMenuItem";
             this.openProjectToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
@@ -1126,6 +1125,8 @@ namespace ReClassNET.Forms
             // 
             // mergeWithProjectToolStripMenuItem
             // 
+            this.mergeWithProjectToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.mergeWithProjectToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.mergeWithProjectToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Folder_Add;
             this.mergeWithProjectToolStripMenuItem.Name = "mergeWithProjectToolStripMenuItem";
             this.mergeWithProjectToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1134,6 +1135,8 @@ namespace ReClassNET.Forms
             // 
             // clearProjectToolStripMenuItem
             // 
+            this.clearProjectToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.clearProjectToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.clearProjectToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Arrow_Refresh;
             this.clearProjectToolStripMenuItem.Name = "clearProjectToolStripMenuItem";
             this.clearProjectToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1147,6 +1150,8 @@ namespace ReClassNET.Forms
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.saveToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Save;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
@@ -1156,6 +1161,8 @@ namespace ReClassNET.Forms
             // 
             // saveAsToolStripMenuItem
             // 
+            this.saveAsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.saveAsToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Save_As;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
@@ -1171,6 +1178,8 @@ namespace ReClassNET.Forms
             // 
             // settingsToolStripMenuItem
             // 
+            this.settingsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.settingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.settingsToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Cogs;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1179,6 +1188,8 @@ namespace ReClassNET.Forms
             // 
             // pluginsToolStripMenuItem
             // 
+            this.pluginsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.pluginsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pluginsToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Plugin;
             this.pluginsToolStripMenuItem.Name = "pluginsToolStripMenuItem";
             this.pluginsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1192,6 +1203,8 @@ namespace ReClassNET.Forms
             // 
             // quitToolStripMenuItem
             // 
+            this.quitToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.quitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.quitToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Quit;
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
@@ -1201,7 +1214,7 @@ namespace ReClassNET.Forms
             // processToolStripMenuItem
             // 
             this.processToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.processInformationsToolStripMenuItem,
+            this.processInfoToolStripMenuItem,
             this.memorySearcherToolStripMenuItem,
             this.namedAddressesToolStripMenuItem,
             this.toolStripSeparator23,
@@ -1218,16 +1231,20 @@ namespace ReClassNET.Forms
             this.processToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.processToolStripMenuItem.Text = "Process";
             // 
-            // processInformationsToolStripMenuItem
+            // processInfoToolStripMenuItem
             // 
-            this.processInformationsToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Category;
-            this.processInformationsToolStripMenuItem.Name = "processInformationsToolStripMenuItem";
-            this.processInformationsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.processInformationsToolStripMenuItem.Text = "Process Informations...";
-            this.processInformationsToolStripMenuItem.Click += new System.EventHandler(this.memoryViewerToolStripMenuItem_Click);
+            this.processInfoToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.processInfoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.processInfoToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Category;
+            this.processInfoToolStripMenuItem.Name = "processInfoToolStripMenuItem";
+            this.processInfoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.processInfoToolStripMenuItem.Text = "Process Informations...";
+            this.processInfoToolStripMenuItem.Click += new System.EventHandler(this.memoryViewerToolStripMenuItem_Click);
             // 
             // memorySearcherToolStripMenuItem
             // 
+            this.memorySearcherToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.memorySearcherToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.memorySearcherToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Eye;
             this.memorySearcherToolStripMenuItem.Name = "memorySearcherToolStripMenuItem";
             this.memorySearcherToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1236,6 +1253,8 @@ namespace ReClassNET.Forms
             // 
             // namedAddressesToolStripMenuItem
             // 
+            this.namedAddressesToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.namedAddressesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.namedAddressesToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Custom_Type;
             this.namedAddressesToolStripMenuItem.Name = "namedAddressesToolStripMenuItem";
             this.namedAddressesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1249,7 +1268,9 @@ namespace ReClassNET.Forms
             // 
             // isLittleEndianToolStripMenuItem
             // 
+            this.isLittleEndianToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.isLittleEndianToolStripMenuItem.CheckOnClick = true;
+            this.isLittleEndianToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.isLittleEndianToolStripMenuItem.Name = "isLittleEndianToolStripMenuItem";
             this.isLittleEndianToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.isLittleEndianToolStripMenuItem.Text = "Is Little Endian";
@@ -1262,6 +1283,8 @@ namespace ReClassNET.Forms
             // 
             // loadSymbolToolStripMenuItem
             // 
+            this.loadSymbolToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.loadSymbolToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.loadSymbolToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Pdb;
             this.loadSymbolToolStripMenuItem.Name = "loadSymbolToolStripMenuItem";
             this.loadSymbolToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1270,6 +1293,8 @@ namespace ReClassNET.Forms
             // 
             // loadSymbolsToolStripMenuItem
             // 
+            this.loadSymbolsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.loadSymbolsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.loadSymbolsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loadSymbolsToolStripMenuItem.Image")));
             this.loadSymbolsToolStripMenuItem.Name = "loadSymbolsToolStripMenuItem";
             this.loadSymbolsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1278,11 +1303,15 @@ namespace ReClassNET.Forms
             // 
             // toolStripSeparator4
             // 
+            this.toolStripSeparator4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.toolStripSeparator4.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(191, 6);
             // 
             // resumeProcessToolStripMenuItem
             // 
+            this.resumeProcessToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.resumeProcessToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.resumeProcessToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Control_Play;
             this.resumeProcessToolStripMenuItem.Name = "resumeProcessToolStripMenuItem";
             this.resumeProcessToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1291,6 +1320,8 @@ namespace ReClassNET.Forms
             // 
             // suspendProcessToolStripMenuItem
             // 
+            this.suspendProcessToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.suspendProcessToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.suspendProcessToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Control_Pause;
             this.suspendProcessToolStripMenuItem.Name = "suspendProcessToolStripMenuItem";
             this.suspendProcessToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1299,6 +1330,8 @@ namespace ReClassNET.Forms
             // 
             // terminateProcessToolStripMenuItem
             // 
+            this.terminateProcessToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.terminateProcessToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.terminateProcessToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Control_Stop;
             this.terminateProcessToolStripMenuItem.Name = "terminateProcessToolStripMenuItem";
             this.terminateProcessToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -1312,8 +1345,7 @@ namespace ReClassNET.Forms
             this.cleanUnusedClassesToolStripMenuItem,
             this.showEnumsToolStripMenuItem,
             this.toolStripSeparator16,
-            this.generateCppCodeToolStripMenuItem,
-            this.generateCSharpCodeToolStripMenuItem});
+            this.generateToolStripMenuItem});
             this.projectToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
             this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
@@ -1321,6 +1353,8 @@ namespace ReClassNET.Forms
             // 
             // goToClassToolStripMenuItem
             // 
+            this.goToClassToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.goToClassToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.goToClassToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Class_Type;
             this.goToClassToolStripMenuItem.Name = "goToClassToolStripMenuItem";
             this.goToClassToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
@@ -1330,6 +1364,8 @@ namespace ReClassNET.Forms
             // 
             // cleanUnusedClassesToolStripMenuItem
             // 
+            this.cleanUnusedClassesToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.cleanUnusedClassesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cleanUnusedClassesToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Chart_Delete;
             this.cleanUnusedClassesToolStripMenuItem.Name = "cleanUnusedClassesToolStripMenuItem";
             this.cleanUnusedClassesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
@@ -1338,6 +1374,8 @@ namespace ReClassNET.Forms
             // 
             // showEnumsToolStripMenuItem
             // 
+            this.showEnumsToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.showEnumsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.showEnumsToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Category;
             this.showEnumsToolStripMenuItem.Name = "showEnumsToolStripMenuItem";
             this.showEnumsToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
@@ -1346,24 +1384,59 @@ namespace ReClassNET.Forms
             // 
             // toolStripSeparator16
             // 
+            this.toolStripSeparator16.BackColor = System.Drawing.Color.Black;
+            this.toolStripSeparator16.ForeColor = System.Drawing.Color.Black;
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(195, 6);
             // 
-            // generateCppCodeToolStripMenuItem
+            // generateToolStripMenuItem
             // 
-            this.generateCppCodeToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Page_Code_Cpp;
-            this.generateCppCodeToolStripMenuItem.Name = "generateCppCodeToolStripMenuItem";
-            this.generateCppCodeToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.generateCppCodeToolStripMenuItem.Text = "Generate C++ Code...";
-            this.generateCppCodeToolStripMenuItem.Click += new System.EventHandler(this.generateCppCodeToolStripMenuItem_Click);
+            this.generateToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.generateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rustToolStripMenuItem,
+            this.csToolStripMenuItem,
+            this.cppToolStripMenuItem});
+            this.generateToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.generateToolStripMenuItem.Name = "generateToolStripMenuItem";
+            this.generateToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.generateToolStripMenuItem.Text = "Generate...";
             // 
-            // generateCSharpCodeToolStripMenuItem
+            // rustToolStripMenuItem
             // 
-            this.generateCSharpCodeToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Page_Code_Csharp;
-            this.generateCSharpCodeToolStripMenuItem.Name = "generateCSharpCodeToolStripMenuItem";
-            this.generateCSharpCodeToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.generateCSharpCodeToolStripMenuItem.Text = "Generate C# Code...";
-            this.generateCSharpCodeToolStripMenuItem.Click += new System.EventHandler(this.generateCSharpCodeToolStripMenuItem_Click);
+            this.rustToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.rustToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.rustToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Page_Code;
+            this.rustToolStripMenuItem.Name = "rustToolStripMenuItem";
+            this.rustToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
+            this.rustToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rustToolStripMenuItem.Text = "Rust";
+            this.rustToolStripMenuItem.ToolTipText = "Generate Rust code";
+            // 
+            // csToolStripMenuItem
+            // 
+            this.csToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.csToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.csToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Page_Code_Csharp;
+            this.csToolStripMenuItem.Name = "csToolStripMenuItem";
+            this.csToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.G)));
+            this.csToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.csToolStripMenuItem.Text = "C#";
+            this.csToolStripMenuItem.ToolTipText = "Generate C# code";
+            this.csToolStripMenuItem.Click += new System.EventHandler(this.GenerateCode_CSharp);
+            // 
+            // cppToolStripMenuItem
+            // 
+            this.cppToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.cppToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cppToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Page_Code_Cpp;
+            this.cppToolStripMenuItem.Name = "cppToolStripMenuItem";
+            this.cppToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.cppToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cppToolStripMenuItem.Text = "C++";
+            this.cppToolStripMenuItem.ToolTipText = "Generate C++ code";
+            this.cppToolStripMenuItem.Click += new System.EventHandler(this.GenerateCode_Cpp);
             // 
             // helpToolStripMenuItem
             // 
@@ -1376,6 +1449,8 @@ namespace ReClassNET.Forms
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.aboutToolStripMenuItem.Image = global::ReClassNET.Properties.Resources.B16x16_Information;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
@@ -1396,7 +1471,7 @@ namespace ReClassNET.Forms
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(200, 100);
             this.Name = "MainForm";
-            this.Text = Constants.ApplicationDisplayName;
+            this.Text = Constants.AppDisplayName;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MainForm_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MainForm_DragEnter);
@@ -1437,7 +1512,7 @@ namespace ReClassNET.Forms
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
 		private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem processToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem processInformationsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem processInfoToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 		private System.Windows.Forms.ToolStripMenuItem resumeProcessToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem suspendProcessToolStripMenuItem;
@@ -1478,8 +1553,6 @@ namespace ReClassNET.Forms
 		private System.Windows.Forms.ToolStripMenuItem projectToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem cleanUnusedClassesToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
-		private System.Windows.Forms.ToolStripMenuItem generateCppCodeToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem generateCSharpCodeToolStripMenuItem;
 		private System.Windows.Forms.Timer processUpdateTimer;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
 		private System.Windows.Forms.ToolStripMenuItem loadSymbolToolStripMenuItem;
@@ -1558,6 +1631,10 @@ namespace ReClassNET.Forms
 		private System.Windows.Forms.ToolStripMenuItem showEnumsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
 		private System.Windows.Forms.ToolStripMenuItem isLittleEndianToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem generateToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem rustToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem csToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem cppToolStripMenuItem;
 	}
 }
 

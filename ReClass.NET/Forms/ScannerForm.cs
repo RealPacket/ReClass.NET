@@ -241,7 +241,7 @@ namespace ReClassNET.Forms
 
 				if (addressListMemoryRecordList.Records.Any())
 				{
-					if (MessageBox.Show("The address list contains addresses. Do you really want to open the file?", $"{Constants.ApplicationDisplayName} Scanner", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+					if (MessageBox.Show("The address list contains addresses. Do you really want to open the file?", $"{Constants.AppDisplayName} Scanner", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
 					{
 						return;
 					}

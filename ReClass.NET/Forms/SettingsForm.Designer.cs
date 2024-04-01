@@ -209,10 +209,10 @@ namespace ReClassNET.Forms
 			this.associationInfoLabel.Size = new System.Drawing.Size(525, 28);
 			this.associationInfoLabel.TabIndex = 0;
 			this.associationInfoLabel.Text = "RCNET files can be associated with " +
-				Constants.ApplicationDisplayName +
+				Constants.AppDisplayName +
 				". " +
 	"When you double-click a RCNET file," +
-	" they will automatically be opened by " + Constants.ApplicationDisplayName + ".";
+	" they will automatically be opened by " + Constants.AppDisplayName + ".";
 			// 
 			// commentsGroupBox
 			// 
@@ -385,7 +385,7 @@ namespace ReClassNET.Forms
 			this.stayOnTopCheckBox.Size = new System.Drawing.Size(187, 17);
 			this.stayOnTopCheckBox.TabIndex = 1;
 			this.stayOnTopCheckBox.Text =
-				"Force " + Constants.ApplicationDisplayName + " to stay on top";
+				"Force " + Constants.AppDisplayName + " to stay on top";
 			this.stayOnTopCheckBox.UseVisualStyleBackColor = true;
 			// 
 			// colorsSettingTabPage
@@ -1195,7 +1195,7 @@ namespace ReClassNET.Forms
 			this.Name = "SettingsForm";
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = Constants.ApplicationDisplayName + " - Settings";
+			this.Text = Constants.AppDisplayName + " - Settings";
 			this.settingsTabControl.ResumeLayout(false);
 			this.generalSettingsTabPage.ResumeLayout(false);
 			this.generalSettingsTabPage.PerformLayout();

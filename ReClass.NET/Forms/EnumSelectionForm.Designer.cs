@@ -165,7 +165,7 @@ namespace ReClassNET.Forms
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "EnumSelectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = Constants.ApplicationDisplayName + " - Enum Selection";
+            this.Text = Constants.AppDisplayName + " - Enum Selection";
             ((System.ComponentModel.ISupportInitialize)(this.bannerBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

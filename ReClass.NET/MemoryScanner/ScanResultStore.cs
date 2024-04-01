@@ -40,7 +40,7 @@ namespace ReClassNET.MemoryScanner
 			this.valueType = valueType;
 			this.storePath = Path.Combine(
 				storePath,
-				$"{Constants.ApplicationName}_MemoryScanner_{Guid.NewGuid()}.tmp"
+				$"{Constants.AppName}_MemoryScanner_{Guid.NewGuid()}.tmp"
 			);
 		}
 

@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using ReClassNET;
 
-[assembly: AssemblyTitle(Constants.ApplicationDisplayName)]
+[assembly: AssemblyTitle(Constants.AppDisplayName)]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct(Constants.ApplicationDisplayName)]
+[assembly: AssemblyProduct(Constants.AppDisplayName)]
 [assembly: AssemblyCopyright(Constants.Author)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -15,5 +15,5 @@ using ReClassNET;
 
 [assembly: Guid("bfb8917d-e9b4-463f-a6e8-612c35728c78")]
 
-[assembly: AssemblyVersion(Constants.ApplicationVersion)]
-[assembly: AssemblyFileVersion(Constants.ApplicationVersion)]
+[assembly: AssemblyVersion(Constants.AppVersion)]
+[assembly: AssemblyFileVersion(Constants.AppVersion)]

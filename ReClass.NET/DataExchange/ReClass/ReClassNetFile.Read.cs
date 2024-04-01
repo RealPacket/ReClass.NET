@@ -44,7 +44,7 @@ namespace ReClassNET.DataExchange.ReClass
 			uint.TryParse(document.Root.Attribute(XmlVersionAttribute)?.Value, out var fileVersion);
 			if ((fileVersion & FileVersionCriticalMask) > (FileVersion & FileVersionCriticalMask))
 			{
-				throw new FormatException($"The file version is unsupported. A newer {Constants.ApplicationDisplayName} version is required to read it.");
+				throw new FormatException($"The file version is unsupported. A newer {Constants.AppDisplayName} version is required to read it.");
 			}
 
 			var platform = document.Root.Attribute(XmlPlatformAttribute)?.Value;
